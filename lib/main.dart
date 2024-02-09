@@ -26,9 +26,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFE4E2DD),
+        backgroundColor: Color.fromARGB(149, 228, 226, 221),
         title: Text(
-          "الملف الشخصي",
+          "User Profile",
           style: TextStyle(color: Color(0xFF292929)),
         ),
         centerTitle: true,
@@ -39,15 +39,95 @@ class HomePage extends StatelessWidget {
         ),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Container(
-            height: 150,
-            width: 150,
-            child: CircleAvatar(
-              backgroundImage: AssetImage("images/profilePic.jpg"),
-              radius: 100,
+          Padding(
+            padding: const EdgeInsets.only(top: 50),
+            child: SizedBox(
+              height: 200,
+              width: 150,
+              child: CircleAvatar(
+                backgroundImage: AssetImage("images/profilePic.jpg"),
+                radius: 100,
+              ),
             ),
-          )
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(45,20,45,5),
+            child: Container(
+              height: 70,
+              width: 330,
+              decoration: BoxDecoration(
+                  color: Color(0xFFE4E2DD),
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.circular(20)),
+              child: ListTile(
+                title: Text("Name", 
+                    style: TextStyle(color: Color(0xFF292929)),),
+                subtitle: Text("Shdn Alomar",
+                    style: TextStyle(color: Color(0xFF292929)),),
+                leading: Icon(Icons.person, color: Color(0xFF292929)),
+                trailing: Icon(Icons.arrow_forward_sharp, color: Color(0xFF292929))
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(45,5,45,5),
+            child: Container(
+              height: 70,
+              width: 330,
+              decoration: BoxDecoration(
+                  color: Color(0xFFE4E2DD),
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.circular(20)),
+                  child: ListTile(
+                title: Text("Phone number", 
+                    style: TextStyle(color: Color(0xFF292929)),),
+                subtitle: Text("05555555555",
+                    style: TextStyle(color: Color(0xFF292929)),),
+                leading: Icon(Icons.phone, color: Color(0xFF292929)),
+                trailing: Icon(Icons.arrow_forward_sharp, color: Color(0xFF292929))
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(45,5,45,5),
+            child: Container(
+              height: 70,
+              width: 330,
+              decoration: BoxDecoration(
+                  color: Color(0xFFE4E2DD),
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.circular(20)),
+                  child: ListTile(
+                title: Text("Address", 
+                    style: TextStyle(color: Color(0xFF292929)),),
+                subtitle: Text("َQassim",
+                    style: TextStyle(color: Color(0xFF292929)),),
+                leading: Icon(Icons.location_pin, color: Color(0xFF292929)),
+                trailing: Icon(Icons.arrow_forward_sharp, color: Color(0xFF292929))
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(45,5,45,5),
+            child: Container(
+              height: 70,
+              width: 330,
+              decoration: BoxDecoration(
+                  color: Color(0xFFE4E2DD),
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.circular(20)),
+                  child: ListTile(
+                title: Text("ُE-mail", 
+                    style: TextStyle(color: Color(0xFF292929)),),
+                subtitle: Text("shdn.ab.alomar@gmail.com",
+                    style: TextStyle(color: Color(0xFF292929)),),
+                leading: Icon(Icons.email, color: Color(0xFF292929)),
+                trailing: Icon(Icons.arrow_forward_sharp, color: Color(0xFF292929))
+              ),
+            ),
+          ),
         ],
       ),
     );
